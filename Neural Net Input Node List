@@ -1,0 +1,15 @@
+Neural Net Setups 
+FANN (25 nodes total, 18, 4, output)
+2- Group of input nodes #1 (no scaling needed)
+	- Current price (yesterdays closing price)
+	- Valuation price (pulled from Roel's fundamentals work)
+3- Group of input nodes #2 (Scaled by google over time window. Stocks are independantly scaled)
+	- Previous week for currently tested ticker
+	- T -2 weeks for ticker
+	- T -3 weeks for ticker
+10- Group of input nodes #3 (price movement should be expressed as percent change)
+	- t-1 
+	- t-2 
+	... t-10 trading days
+10 -Group of input nodes #4 (volume for the stock (scaled on 3 year window))
+	- t-1 to t-10 for volume
